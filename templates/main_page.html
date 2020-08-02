@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>TimeTable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/static/css/proj.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <style>
+    .datebox {
+      display: contents;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/success">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <form id="tblform" class="" method="post">{% csrf_token %}
+      <div class="row">
+        <div class="col-lg-1 col-sm-1">
+          <h4>Edit/Clone</h4>
+        </div>
+        <div class="col-lg-3 ajax-dropdown" style="padding-top: 7px;">
+        </div>
+      </div>
+      
+      <center>
+        <div class="divtable row">
+          <div id="grid_configurator">
+            <h3>
+              <center>COLLEGE TIME TABLE</center>
+            </h3>
+            <table id="tblData" align="center">
+              <tbody>
+                <tr>
+                  <td><input type="button" onclick="addSchedule();" style="width:100%;" id="btnadd" value="Add"></td>
+                </tr>
+                <tr>
+                  <td><b>MONDAY</b></td>
+                </tr>
+                <tr>
+                  <td><b>TUESDAY</b></td>
+                </tr>
+                <tr>
+                  <td><b>WEDNESDAY</b></td>
+                </tr>
+                <tr>
+                  <td><b>THURSDAY</b></td>
+                </tr>
+                <tr>
+                  <td><b>FRIDAY</b></td>
+                </tr>
+                <tr>
+                  <td><b>SATURDAY</b></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top:5px;" class="pull-right">
+              <input type="button" id="mergeTbl" style="display:none;" name="" class="btn btn-success" value="Merge">
+              <input type="button" id="editTbl" style="display:none;" name="" class="btn btn-warning" value="Edit">
+              <input type="button" id="canceleditTbl" style="display:none;" name="" class="btn btn-warning"
+                value="Cancel">
+              <input type="button" id="delTbl" style="display:none;" name="" class="btn btn-danger" value="Delete">
+              <input type="button" id="printTbl" style="display:none;" name="" class="btn btn-primary" value="Print">
+              <input type="submit" id="saveTbl" style="display:none;" name="" class="btn btn-info" value="Save">
+              <input type="button" id="updateTbl" style="display:none;" name="" class="btn btn-info" value="Update">
+            </div>
+          </div>
+        </div>
+      </center>
+      
+    </form>
+  </div>
+  <script src="/static/js/proj.min.js"></script>
+  <script>
+  </script>
+</body>
+</html>

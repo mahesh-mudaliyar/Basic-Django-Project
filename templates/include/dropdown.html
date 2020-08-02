@@ -1,0 +1,10 @@
+<select onchange="selectload();" class="form-control select2">
+    <option value="">Select</option>
+    {% for fd in filedate %}
+        {% if date == fd.date %}
+        <option value="{{fd.date}}" selected>{{ fd.date }}</option>
+        {% else %}
+        <option value="{{fd.date}}">{{ fd.date }}</option>
+        {% endif %}
+    {% endfor %}
+</select>

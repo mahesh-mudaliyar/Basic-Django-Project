@@ -1,0 +1,70 @@
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.login-form .form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.login-form .btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+.container{
+  position: relative;
+}
+.divtable{  
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 20px;
+  display: inline-table;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: center;
+}
+.divtable h3{
+  border-bottom: 1px solid;
+}
+.navbar {
+  border-radius: 0px;
+}
+table, tr, td{
+  border:1px solid black;
+  border-collapse: separate;
+  border-spacing: 5px;
+
+}
+td{
+  padding:1px 4px;
+  max-width:188px;
+  text-align: center;
+}
+td.selected{
+  border:1px solid green;
+}
+td.hidden
+{
+	display: none;
+}
+td.selected{
+  border: 2px dashed goldenrod;
+}
+.datebox{
+  display: contents;
+}
