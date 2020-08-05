@@ -1,1 +1,1 @@
-web: gunicorn TimeTableApp:app
+web: gunicorn manage:app
