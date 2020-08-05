@@ -95,12 +95,16 @@ def loadata(request):
 
 @csrf_exempt
 def deldata(request):
-    if request.method == 'POST':
-        filedata = userfilepaths.objects.get(date=request.POST.get('date'))
-        filepath = filedata.filepath
-        os.remove(filepath)
-        userfilepaths.objects.filter(filepath=filepath).delete()
-        return JsonResponse({'success': True})
+    try:
+        if request.method == 'POST':
+            filedata = userfilepaths.objects.get(date=request.POST.get('date'))
+            filepath = filedata.filepath
+            os.remove(filepath)
+            userfilepaths.objects.filter(filepath=filepath).delete()
+            return JsonResponse({'success': True})
+    except:
+        return JsonResponse({'success': False})
+    
 
 def ajaxdropdown(request):
     if request.method == 'GET':

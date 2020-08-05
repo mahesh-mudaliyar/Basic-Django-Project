@@ -38,7 +38,9 @@
         <div class="col-lg-3 ajax-dropdown" style="padding-top: 7px;">
         </div>
       </div>
-      
+      <input type="button" onclick="addrow();" id="btnadd" value="AddRow">
+      <input type="button" onclick="addcol();" id="btnadd" value="AddCol">
+
       <center>
         <div class="divtable row">
           <div id="grid_configurator">
@@ -47,30 +49,13 @@
             </h3>
             <table id="tblData" align="center">
               <tbody>
-                <tr>
-                  <td><input type="button" onclick="addSchedule();" style="width:100%;" id="btnadd" value="Add"></td>
-                </tr>
-                <tr>
-                  <td><b>MONDAY</b></td>
-                </tr>
-                <tr>
-                  <td><b>TUESDAY</b></td>
-                </tr>
-                <tr>
-                  <td><b>WEDNESDAY</b></td>
-                </tr>
-                <tr>
-                  <td><b>THURSDAY</b></td>
-                </tr>
-                <tr>
-                  <td><b>FRIDAY</b></td>
-                </tr>
-                <tr>
-                  <td><b>SATURDAY</b></td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
+                <tr></tr>
+                <!-- <tr>
+                    <td><input type="button" onclick="addcol();" style="width:100%;" id="btnadd" value="Add"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" onclick="addrow();" style="width:100%;" id="btnadd" value="Add"></td>
+                  </tr> -->
               </tbody>
             </table>
             <div style="margin-top:5px;" class="pull-right">
@@ -86,11 +71,12 @@
           </div>
         </div>
       </center>
-      
+
     </form>
   </div>
   <script src="/static/js/proj.min.js"></script>
   <script>
+
   </script>
 </body>
 </html>
